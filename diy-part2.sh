@@ -14,4 +14,6 @@
 sed -i 's/192.168.1.1/10.10.10.3/g' package/base-files/files/bin/config_generate
 
 # Modify default Theme
-sed -i s/luci-theme-bootstrap/luci-theme-argon/ feeds/luci/collections/luci/Makefile
+sed -i s/luci-theme-bootstrap/luci-theme-argon/ feeds/luci/collections/luci/Makefile 
+rm -rf package/lean/luci-theme-argon  
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/
